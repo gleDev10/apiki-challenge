@@ -1,0 +1,21 @@
+footer {
+  background: #0d1317;
+  color: #cecece;
+  padding: 1rem;
+}
+
+footer button {
+  gap: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 15rem;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  footer .row {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

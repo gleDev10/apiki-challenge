@@ -1,0 +1,11 @@
+ul.menu-social_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+ul.menu-social_icons a {
+  padding: 0.5rem;
+  color: #cecece;
+}

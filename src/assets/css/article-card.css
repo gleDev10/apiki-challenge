@@ -1,0 +1,199 @@
+.post-article {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb1f;
+  border: 1px solid #ebebeb;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.post-article:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
+}
+.post-article .post-thumb {
+  position: relative;
+  flex: 1;
+}
+.post-article .post-thumb img {
+  object-fit: cover;
+  display: block;
+  height: 100%;
+}
+.post-article .post-thumb .post-category {
+  border-radius: 2rem;
+  /* background: linear-gradient(to right, #fe4f70, #a70523); */
+  background: linear-gradient(
+    to right,
+    var(--theme-color-orange-2),
+    var(--theme-color-orange-1)
+  );
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.3rem 1.5rem;
+  font-size: 0.75rem;
+}
+.post-article .post-thumb .post-category a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.post-article .post-content {
+  padding: 1.5rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+.post-article .post-content .post-meta {
+  display: flex;
+  align-items: center;
+  color: #7a7a7a;
+  font-size: 0.8rem;
+}
+
+.post-article .post-content .post-meta .meta-author {
+  display: flex;
+  align-items: center;
+}
+.post-article .post-content .post-meta .meta-author::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--theme-color-orange-1);
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.post-article .post-content .post-meta .meta-author a {
+  color: #7a7a7a;
+}
+.post-article .post-content .post-meta .meta-author img {
+  border-radius: 50px;
+  margin-right: 1rem;
+}
+.post-article .post-content .post-title {
+  line-height: 1.3;
+  font-size: clamp(1rem, 0.7857rem + 1.1429vw, 1.6rem);
+}
+.post-article .post-content .post-title a {
+  color: #203656;
+  font-weight: 600;
+  transition: all 0.1s ease-in-out;
+}
+.post-article .post-content .post-title a:hover {
+  color: var(--theme-color-yellow);
+}
+.post-article .post-content .post-excerpt {
+  font-size: 1rem;
+  color: #7a7a7a;
+  line-height: 1.6;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+.post-article .post-content hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-color: #ebebeb;
+  opacity: 0.2;
+}
+.post-article .post-content .post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-article .post-content .post-footer .post-footer--share {
+  display: flex;
+  line-height: 0;
+}
+.post-article
+  .post-content
+  .post-footer
+  .post-footer--share
+  button.toggle-button {
+  background: transparent;
+  line-height: 0;
+  outline: none;
+}
+.post-article
+  .post-content
+  .post-footer
+  .post-footer--share
+  button.toggle-button,
+.post-article .post-content .post-footer .post-footer--share a {
+  color: #8f9bad;
+  padding: 0.3rem 0.6rem;
+}
+.post-article
+  .post-content
+  .post-footer
+  .post-footer--share
+  button
+  svg.icon-share,
+.post-article
+  .post-content
+  .post-footer
+  .post-footer--share
+  button
+  svg.icon-close {
+  display: none;
+}
+.post-article
+  .post-content
+  .post-footer
+  .post-footer--share
+  button.toggle-button.icon-share
+  svg.icon-share {
+  display: block;
+}
+.post-article
+  .post-content
+  .post-footer
+  .post-footer--share
+  button.toggle-button.icon-close
+  svg.icon-close {
+  display: block;
+}
+
+.post-article .post-footer .post-footer--share ul {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  width: 0;
+  flex-direction: row;
+  overflow: hidden;
+}
+.post-article .post-footer .post-footer--share ul.active {
+  width: auto;
+}
+.post-article .post-footer .post-footer--share .toggle-button {
+  display: inline-flex;
+  background: transparent;
+}
+.post-footer--share ul.list-share.active::before {
+  content: "";
+  background: #ddd;
+  display: inline-block;
+  height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 30px;
+}
+.post-footer--link {
+  display: flex;
+  align-items: center;
+}
+.post-footer--link a {
+  color: #8f9bad;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  display: flex;
+  padding: 0.3rem 0.6rem;
+}
+.post-footer--link:hover a {
+  border-color: var(--theme-color-orange-2);
+}
