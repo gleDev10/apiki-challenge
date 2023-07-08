@@ -19,7 +19,6 @@ function SinglePost() {
         const response = await getPosts(`/posts?_embed&slug=${params.slug}`);
         const [post] = await post_estrutura(response.data);
         setSinglePost(post);
-        console.log(post == undefined);
         if (post == undefined) navigate("/not-found");
       } catch (error) {
         console.error(error);

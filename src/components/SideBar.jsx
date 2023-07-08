@@ -47,11 +47,11 @@ function Sidebar() {
         <form action="">
           <div className="form-group">
             <label htmlFor="subscribe">Nome</label>
-            <input type="text" name="subscribe" required />
+            <input type="text" name="subscribe" id="subscribe" required />
           </div>
           <div className="form-group">
             <label htmlFor="emailInput">E-mail</label>
-            <input type="email" name="emailInput" required />
+            <input type="email" name="emailInput" id="emailInput" required />
           </div>
           <button type="submit">Receber agora</button>
         </form>

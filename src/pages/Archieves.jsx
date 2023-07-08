@@ -24,7 +24,6 @@ function Archieves() {
       );
       const newData = await post_estrutura(response.data);
 
-      console.log(newData);
       setPost((post) => [...post, ...newData]);
       setIsLoading(false);
     } catch (error) {
@@ -41,7 +40,6 @@ function Archieves() {
         const response = await getPosts(`/posts?_embed&${term}=${term_slug}`);
         // Faça algo com a resposta da requisição
         setCurrentPage((currentPage) => currentPage + 1);
-        console.log(response.headers);
         setTotalPages(response.headers["x-wp-totalpages"]);
         const dataPost = await post_estrutura(response.data);
         setPost(dataPost);

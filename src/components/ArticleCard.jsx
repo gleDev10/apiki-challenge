@@ -14,7 +14,6 @@ import PropTypes from "prop-types";
 
 const ArticleCard = ({ article }) => {
   const { post } = article;
-  // console.log(post);
   function handleShareButtons(event) {
     event.preventDefault();
     event.currentTarget.nextSibling.classList.toggle("active");
