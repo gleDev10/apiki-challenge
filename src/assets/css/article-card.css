@@ -81,6 +81,13 @@
   font-weight: 600;
   transition: all 0.1s ease-in-out;
 }
+@media (prefers-color-scheme: dark) {
+  .post-article .post-content .post-title a {
+    color: #ffffffde;
+    font-weight: 600;
+    transition: all 0.1s ease-in-out;
+  }
+}
 .post-article .post-content .post-title a:hover {
   color: var(--theme-color-yellow);
 }
